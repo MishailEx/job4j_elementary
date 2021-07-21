@@ -29,10 +29,8 @@ public class Machine {
         int change = money - price;
         for (int i = 0; i < coins.length; i++) {
             while (change - coins[i] >= 0) {
-                size++;
-                rsl[j] = coins[i];
                 change -= coins[i];
-                j++;
+                rsl[size++] = coins[i];
             }
         }
         return Arrays.copyOf(rsl, size);
